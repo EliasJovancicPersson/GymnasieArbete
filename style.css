@@ -1,7 +1,11 @@
+:root{
+    --page-width:80vh;
+}
+
 body{
     margin: 0;
     padding: 0;
-    min-height: 200vh;
+    min-height: 100vh;
     min-width: 100vw;
 }
 
@@ -44,7 +48,7 @@ nav ul{
 }
 
 .intro{
-    width: 75vw;
+    width: var(--page-width);
 }
 
 .imgPlacehold{
@@ -53,4 +57,12 @@ nav ul{
     margin: 0;
     padding: 0;
     background-color: darkgrey;
+}
+
+.teamPics{
+    width: var(--page-width);
+}
+
+.faq{
+    width: var(--page-width);
 }
