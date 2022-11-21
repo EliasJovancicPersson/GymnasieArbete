@@ -1,7 +1,7 @@
 :root{
     --page-width:80vh;
     --main-color: #537a5a;
-    --secondary-color:#f3e9dc;
+    --secondary-color:#ffffff;
     
     --fs-1:50px;
     --fs-2:30px;
@@ -15,9 +15,11 @@ body{
     min-width: 100vw;
     background-color: var(--secondary-color);
 }
-
+/*
+NAVIGATION
+*/
 nav{
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     padding: 0;
     margin: 0;
     position: sticky;
@@ -31,7 +33,7 @@ nav{
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0;
     margin: 0;
     flex-grow: 3;
@@ -56,7 +58,6 @@ nav li a{
     max-width: 280px;
     padding: 0;
     margin: 0.5rem;
-
 }
 
 .container{
@@ -65,38 +66,15 @@ nav li a{
     justify-content: center;
     align-items: center;
 }
-
-.containerRow{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
+/*
+INTRO
+*/
 .intro{
     width: var(--page-width);
 }
-
-.imgPlacehold{
-    width: 150px;
-    height: 225px;
-    margin: 0;
-    padding: 0;
-    background-color: var(--main-color);
-}
-
-.teamPics{
-    width: var(--page-width);
-}
-
-.faq{
-    width: var(--page-width);
-    margin-bottom: 2rem;
-}
-
-.faq h2{
-margin: 0.5rem;
-}
-
+/*
+DROPDOWN
+*/
 .dropdown{
     position: relative;
     margin: 20px;
@@ -134,11 +112,18 @@ margin: 0.5rem;
     padding-right: 1.5rem;
 }
 
+.faq h2{
+    font-size: var(--fs-2);
+    
+}
+
 .question .question-answer p{
     color: var(--secondary-color);
     margin: 0;
 }
-
+/*
+FOOTER
+*/
 footer{
     position: absolute;
     bottom: 0;
