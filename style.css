@@ -1,8 +1,7 @@
 :root{
     --page-width:80vh;
-    --main-color:#dab49d;
+    --main-color: #537a5a;
     --secondary-color:#f3e9dc;
-    --main-color: #655356;
     
 }
 
@@ -37,6 +36,10 @@ nav ul{
     padding: 0;
     margin: 0;
     height: 80px;
+}
+
+.logo{
+    
 }
 
 .container{
