@@ -1,5 +1,5 @@
 :root{
-    --page-width:80vh;
+    --page-width:80vw;
     --main-color: #537a5a;
     --secondary-color:#ffffff;
     
@@ -71,6 +71,25 @@ INTRO
 */
 .intro{
     width: var(--page-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro-txt{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.intro h2{
+    font-size: var(--fs-1);
+}
+.intro p{
+    font-size: var(--fs-3);
+}
+.intro img{
+    max-width: calc(var(--page-width)/1.9);
+    padding: 20px;
+    margin: 20px;
 }
 /*
 DROPDOWN
@@ -114,7 +133,7 @@ DROPDOWN
 
 .faq h2{
     font-size: var(--fs-2);
-    
+
 }
 
 .question .question-answer p{
@@ -125,7 +144,7 @@ DROPDOWN
 FOOTER
 */
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100vw;
     height: 20vh;
