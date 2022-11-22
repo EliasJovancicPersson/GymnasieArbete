@@ -6,6 +6,8 @@
     --fs-1:50px;
     --fs-2:30px;
     --fs-3:20px;
+
+    --img-margin-padding:10px;
 }
 
 body{
@@ -62,10 +64,27 @@ nav li a{
 
 .container{
     display: flex;
+}
+
+.column-center{
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.row-center{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*
+Padding and margin for all blocks
+*/
+.intro,.intro-tripple{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 /*
 INTRO
 */
@@ -82,14 +101,51 @@ INTRO
 }
 .intro h2{
     font-size: var(--fs-1);
+    border-bottom: solid;
+    padding-bottom: 1rem;
+    margin: 0;
 }
 .intro p{
-    font-size: var(--fs-3);
+    font-size: var(--fs-2);
 }
 .intro img{
-    max-width: calc(var(--page-width)/3);
-    padding: 20px;
-    margin: 20px;
+    max-width: calc(var(--page-width)/2);
+}
+
+/*
+Margin and padding for all images
+*/
+.image{
+    margin: var(--img-margin-padding);
+    padding: var(--img-margin-padding);
+}
+/*
+INTRO-TRIPPLE
+*/
+.intro-tripple{
+    width: var(--page-width);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    border-top: solid;
+}
+
+.intro-tripple img{
+    width: 100%;
+}
+
+.intro-tripple .image{
+    flex: 1;
+
+    box-sizing: border-box;
+} 
+
+.intro-tripple .image p{
+    font-size: var(--fs-2);
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    border-bottom: solid
 }
 /*
 DROPDOWN
