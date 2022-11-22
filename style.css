@@ -1,5 +1,5 @@
 :root{
-    --page-width:80vw;
+    --page-width:65vw;
     --main-color: #537a5a;
     --secondary-color:#ffffff;
     
@@ -19,7 +19,7 @@ body{
 NAVIGATION
 */
 nav{
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     padding: 0;
     margin: 0;
     position: sticky;
@@ -87,7 +87,7 @@ INTRO
     font-size: var(--fs-3);
 }
 .intro img{
-    max-width: calc(var(--page-width)/1.9);
+    max-width: calc(var(--page-width)/3);
     padding: 20px;
     margin: 20px;
 }
@@ -115,7 +115,6 @@ DROPDOWN
 
 .question{
     background-color: var(--main-color);
-    width: var(--page-width);
     margin: 0;
     padding: 0;
 }
@@ -140,6 +139,11 @@ DROPDOWN
     color: var(--secondary-color);
     margin: 0;
 }
+
+.faq{
+    margin: 50px;
+    width: var(--page-width);
+}
 /*
 FOOTER
 */
@@ -147,7 +151,7 @@ footer{
     position: relative;
     bottom: 0;
     width: 100vw;
-    height: 20vh;
+    height: 25vh;
     background-color: var(--main-color);
 
     display: flex;
@@ -193,5 +197,14 @@ footer ul li a{
     text-decoration: underline;
 }
 
+@media screen and (max-width: 1750px){
+    :root{
+        --page-width:85vw;
+    }
+}
 
-
+@media screen and (max-width: 1450px){
+    :root{
+        --page-width:100vw;
+    }
+}
