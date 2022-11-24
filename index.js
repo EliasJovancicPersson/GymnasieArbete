@@ -18,8 +18,8 @@ let url = "https://http-nodejs-production-d03d.up.railway.app";
 fetch(url, {
 	method: "POST",
 	headers: {
-		Accept: "application/json",
-		"Content-Type": "application/json",
+		Accept: "text/plain",
+		"Content-Type": "text/plain",
 		// 'Content-Type': 'application/x-www-form-urlencoded',
 	},
 	body: JSON.stringify(myData),
