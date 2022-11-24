@@ -16,11 +16,10 @@ function DropDown(element) {
 let url = "https://http-nodejs-production-d03d.up.railway.app";
 
 fetch(url, {
-	method: "POST",
+	method: "GET",
 	headers: {
 		Accept: "text/plain",
 		"Content-Type": "text/plain",
 		// 'Content-Type': 'application/x-www-form-urlencoded',
 	},
-	body: JSON.stringify(myData),
 }).then((response) => console.log(response));
