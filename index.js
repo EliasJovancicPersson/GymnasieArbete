@@ -13,6 +13,6 @@ function DropDown(element) {
 	dropdownContent.classList.toggle("display-none");
 }
 
-fetch("http-nodejs-production-d03d.up.railway.app", { credentials: "include" })
+fetch("railway:5784", { credentials: "include" })
 	.then((response) => response.json())
 	.then((data) => console.log(data));
