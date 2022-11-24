@@ -13,7 +13,7 @@ function DropDown(element) {
 	dropdownContent.classList.toggle("display-none");
 }
 
-let url = "https://http-nodejs-production-d03d.up.railway.app/server.js";
+let url = "https://http-nodejs-production-d03d.up.railway.app";
 
 fetch(url, {
 	method: "GET",
