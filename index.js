@@ -16,6 +16,7 @@ function DropDown(element) {
 }
 
 let url = "https://http-nodejs-production-d03d.up.railway.app/";
+let responseArr = [];
 
 fetch(url, {
 	method: "GET",
@@ -24,4 +25,4 @@ fetch(url, {
 		"Content-Type": "text/plain",
 		// 'Content-Type': 'application/x-www-form-urlencoded',
 	},
-}).then((response) => console.log(response.text()));
+}).then((response) => console.log(response.json()));
