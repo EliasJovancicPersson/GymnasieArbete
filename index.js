@@ -13,8 +13,14 @@ function DropDown(element) {
 	dropdownContent.classList.toggle("display-none");
 }
 
-fetch("https://http-nodejs-production-d03d.up.railway.app", {
-	credentials: "include",
-})
-	.then((response) => response.json())
-	.then((data) => console.log(data));
+let url = "https://http-nodejs-production-d03d.up.railway.app";
+
+fetch(url, {
+	method: "POST",
+	headers: {
+		Accept: "application/json",
+		"Content-Type": "application/json",
+		// 'Content-Type': 'application/x-www-form-urlencoded',
+	},
+	body: JSON.stringify(myData),
+}).then((response) => console.log(response));
