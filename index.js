@@ -22,4 +22,4 @@ fetch(url, {
 		"Content-Type": "text/plain",
 		// 'Content-Type': 'application/x-www-form-urlencoded',
 	},
-}).then((response) => console.log(response));
+}).then((response) => console.log(response.text()));
