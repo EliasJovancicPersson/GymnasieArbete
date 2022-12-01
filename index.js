@@ -14,7 +14,7 @@ function DropDown(element) {
   dropdownContent.classList.toggle("display-none");
 }
 
-let url = "https://http-nodejs-production-d03d.up.railway.app/";
+let url = "https://node-webb-application-gyar.azurewebsites.net/assignments";
 
 let responseArray = [];
 
