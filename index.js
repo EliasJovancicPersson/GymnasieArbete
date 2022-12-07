@@ -21,10 +21,6 @@ let responseArray = [];
 async function Test() {
   let responseVar = fetch(url, {
     method: "GET",
-    headers: {
-      Accept: "text/plain",
-      "Content-Type": "text/plain",
-    },
   }).then((response) => response.json());
 
   responseArray = await responseVar;
@@ -34,16 +30,6 @@ async function Test() {
     let titles = document.querySelectorAll(".title .title-header h3");
 
     let gyarbText = document.querySelectorAll(".title-answer p");
-
-    for (let i = 0; i < responseArray.length; i++) {
-      titles[i].textContent = responseArray[i].title;
-      gyarbText[i].textContent = responseArray[i].text;
-      console.log(titles[i].textContent);
-      console.log(responseArray[i].title);
-
-      console.log(gyarbText[i].textContent);
-      console.log(responseArray[i].text);
-    }
   }
 }
 
