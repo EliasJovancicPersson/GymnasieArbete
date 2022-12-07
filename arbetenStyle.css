@@ -47,6 +47,7 @@
 .gyarb{
     margin: 50px;
     width: var(--page-width);
+    min-height: 60vh;
 }
 
 

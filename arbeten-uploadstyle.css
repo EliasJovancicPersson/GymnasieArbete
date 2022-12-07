@@ -1,0 +1,41 @@
+.container .gyarb{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: var(--page-width);
+}
+
+.form-text label textarea{
+    height: 60vh;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form .form-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-end input{
+    margin-right:20px ;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+form .form-end{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    height: 2.5vh;
+}
+
+
+
+
