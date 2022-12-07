@@ -3,13 +3,17 @@
     justify-content: center;
 }
 
+.gyarb{
+    margin: 30px;
+}
+
 form{
     display: flex;
     flex-direction: column;
     width: var(--page-width);
 }
 
-.form-text label textarea{
+form .form-text label textarea{
     height: 60vh;
     width: 100%;
     padding: 0;
@@ -22,7 +26,7 @@ form .form-info{
     margin-bottom: 20px;
 }
 
-.form-end input{
+form .form-end input{
     margin-right:20px ;
     flex: 1;
     box-sizing: border-box;
@@ -34,6 +38,13 @@ form .form-end{
     margin-top: 20px;
     width: 100%;
     height: 2.5vh;
+}
+
+form .form-info .title{
+    flex: 1;
+}
+form .form-info .title input{
+    width: 65vw;
 }
 
 

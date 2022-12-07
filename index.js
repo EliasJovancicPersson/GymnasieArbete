@@ -1,23 +1,24 @@
 if (document.getElementsByClassName("dropdown")) {
-  const dropdownNodelist = document.getElementsByClassName("dropdown");
-  let dropdownArray = Array.from(dropdownNodelist);
+	const dropdownNodelist = document.getElementsByClassName("dropdown");
+	let dropdownArray = Array.from(dropdownNodelist);
 
-  dropdownArray.forEach(function (element) {
-    element.addEventListener("click", () => {
-      DropDown(element);
-    });
-  });
+	dropdownArray.forEach(function (element) {
+		element.addEventListener("click", () => {
+			DropDown(element);
+		});
+	});
 }
 
 function DropDown(element) {
-  let dropdownContent = element.querySelector(".dropdown-content");
-  dropdownContent.classList.toggle("display-none");
+	let dropdownContent = element.querySelector(".dropdown-content");
+	dropdownContent.classList.toggle("display-none");
 }
 
 let url = "https://node-webb-application-gyar.azurewebsites.net/assignments";
 
 let responseArray = [];
 
+/*
 async function Test() {
   let responseVar = fetch(url, {
     method: "GET",
@@ -33,4 +34,4 @@ async function Test() {
   }
 }
 
-Test();
+Test();*/
