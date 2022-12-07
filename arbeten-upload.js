@@ -21,8 +21,17 @@ function submit() {
 			text: textElement.value,
 			subject: subjectElement.value,
 		});
-		console.log(jsonFile);
+		post(url, jsonFile);
 	} else {
 		console.log("error, missing field");
 	}
+}
+
+function post(jsonfile) {
+	fetch("http://localhost:8000/wiki", {
+		method: "POST",
+		body: jsonfile,
+	}).then(function (response) {
+		console.log(response);
+	});
 }
