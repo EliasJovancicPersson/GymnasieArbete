@@ -11,9 +11,27 @@ async function GetProjects() {
       responseArray = await response.projects;
 
       if (document.querySelectorAll(".gyarb")) {
-        let titles = document.querySelector(".title .title-header h3");
+        try {
+          let a = document.querySelectorAll(".gyarb a");
+          let titles = document.querySelectorAll(".title .title-header h3");
 
-        titles.textContent = responseArray[0].title;
+          for (let i = 0; i < a.length; i++) {
+            try {
+              a[i].id = responseArray[i]._id;
+              const pageUrl = url + "/" + a[i].id;
+              a[i].href = pageUrl;
+              titles[i].textContent = responseArray[i].title;
+            } catch (err) {
+              console.log(err);
+              //display error on website for not finding the project from backend
+              titles[i].textContent =
+                "ERROR, could not read from database. Maybe it dosent exist?";
+            }
+          }
+        } catch (err) {
+          console.log(err);
+          //display error on website for not finding the html elements
+        }
       }
     });
 }

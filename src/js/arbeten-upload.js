@@ -16,13 +16,13 @@ function submit() {
     subjectElement.value != "Välj ett ämne"
   ) {
     console.log(titleElement.value);
-    post(url);
+    post();
   } else {
     console.log("error, missing field");
   }
 }
 
-function post(jsonfile) {
+function post() {
   fetch("http://localhost:8000/wiki", {
     method: "POST",
     headers: {
