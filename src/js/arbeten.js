@@ -18,7 +18,7 @@ async function GetProjects() {
           for (let i = 0; i < a.length; i++) {
             try {
               a[i].id = responseArray[i]._id;
-              const pageUrl = url + "/" + a[i].id;
+              const pageUrl = "/src/html/arbete-template.html?id=" + a[i].id;
               a[i].href = pageUrl;
               titles[i].textContent = responseArray[i].title;
             } catch (err) {

@@ -1,0 +1,15 @@
+.gyarb{
+    border: solid;
+    border-radius: 20px;
+}
+
+.text-info{
+    margin: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-main{
+    margin: 20px 60px;
+}
