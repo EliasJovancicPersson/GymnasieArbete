@@ -1,19 +1,3 @@
-if (document.getElementsByClassName("dropdown")) {
-  const dropdownNodelist = document.getElementsByClassName("dropdown");
-  let dropdownArray = Array.from(dropdownNodelist);
-
-  dropdownArray.forEach(function (element) {
-    element.addEventListener("click", () => {
-      DropDown(element);
-    });
-  });
-}
-
-function DropDown(element) {
-  let dropdownContent = element.querySelector(".dropdown-content");
-  dropdownContent.classList.toggle("display-none");
-}
-
 let url = "http://localhost:8000/wiki";
 
 let responseArray = [];
