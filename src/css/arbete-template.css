@@ -1,6 +1,10 @@
 .gyarb{
     border: solid;
     border-radius: 20px;
+    margin: 50px;
+    width: var(--page-width);
+    min-height: 60vh;
+   
 }
 
 .text-info{
