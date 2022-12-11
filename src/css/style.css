@@ -16,6 +16,7 @@ body{
     min-height: 100vh;
     min-width: 100vw;
     background-color: var(--secondary-color);
+    overflow-x: hidden;
 }
 /*
 NAVIGATION
@@ -148,14 +149,6 @@ INTRO-TRIPPLE
     border-bottom: solid
 }
 /*
-DROPDOWN
-*/
-.work-link{
-    position: relative;
-    margin: 20px;
-}
-
-/*
 FOOTER
 */
 footer{
@@ -209,11 +202,19 @@ footer ul li a{
     :root{
         --page-width:85vw;
     }
+    body{
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (max-width: 1450px){
     :root{
         --page-width:100vw;
     }
+    body{
+        overflow-y: scroll;
+    }
 }
+
+
 

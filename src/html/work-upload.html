@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/src/css/css-reset.css">
 	<link rel="stylesheet" href="/src/css/arbeten-uploadstyle.css" />
 	<link rel="stylesheet" href="/src/css/style.css" />
 	<script src="/src/js/arbeten-upload.js" defer></script>
@@ -31,14 +32,21 @@
 		<div class="gyarb">
 			<form>
 				<div class="form-info">
-					<label for="title" class="title">
-						Titel:
+					<div class="title">
+						<label for="title">
+							Titel:
+						</label>
 						<input type="text" name="title" id="title" />
-					</label>
-					<label for="author" class="author">
-						Författare:
-						<input type="text" name="title" id="title" />
-					</label>
+					</div>
+
+					<div class="author">
+						<label for="author">
+							Författare:
+						</label>
+						<input type="text" name="author" id="author" />
+					</div>
+
+
 				</div>
 				<div class="form-text">
 					<label for="text">
@@ -47,7 +55,7 @@ Klistra in ditt gymnasiearbete här</textarea>
 					</label>
 				</div>
 				<div class="form-end">
-					<input type="button" value="Submit" />
+
 
 					<select name="subjects" id="subject">
 						<option value="Välje ett ämne">Välje ett ämne</option>
@@ -65,6 +73,7 @@ Klistra in ditt gymnasiearbete här</textarea>
 						<option value="estetiskaprogrammet">estetiskaprogrammet</option>
 						<option value="internationall">internationall</option>
 					</select>
+					<input type="button" value="Submit" />
 				</div>
 			</form>
 		</div>

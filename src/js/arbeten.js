@@ -2,6 +2,8 @@ let url = "http://localhost:8000/wiki";
 
 let responseArray = [];
 
+const maxEntires = 10;
+
 async function GetProjects() {
   let responseVar = fetch(url, {
     method: "GET",
@@ -10,7 +12,9 @@ async function GetProjects() {
     .then(async function (response) {
       responseArray = await response.projects;
 
-      if (document.querySelectorAll(".gyarb")) {
+      if (document.querySelector(".gyarb")) {
+        CreateElements(responseArray);
+
         try {
           let a = document.querySelectorAll(".gyarb a");
           let titles = document.querySelectorAll(".title .title-header h3");
@@ -34,6 +38,35 @@ async function GetProjects() {
         }
       }
     });
+}
+
+function CreateElements(projectsArray) {
+  //create elements for each project, max 10 before new page
+  console.log(projectsArray);
+  const gyarb = document.querySelector(".gyarb");
+
+  const elementArray = [];
+
+  projectsArray.forEach((element) => {
+    if (elementArray.length < maxEntires) {
+      const a = document.createElement("a");
+      elementArray.push(a);
+      a.classList = "work-link";
+      const div0 = document.createElement("div");
+      div0.classList = "title";
+      const div1 = document.createElement("div");
+      div1.classList = "title-header";
+      const title = document.createElement("h3");
+      gyarb.appendChild(a);
+      a.appendChild(div0);
+      div0.appendChild(div1);
+      div1.appendChild(title);
+      console.log("created elements");
+    } else {
+      console.log("max enties reached");
+    }
+  });
+  console.log(elementArray);
 }
 
 GetProjects();

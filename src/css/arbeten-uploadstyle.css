@@ -1,3 +1,7 @@
+body{
+    overflow-y: hidden;
+}
+
 .container .gyarb{
     display: flex;
     justify-content: center;
@@ -22,12 +26,13 @@ form .form-text label textarea{
 
 form .form-info{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
 form .form-end input{
-    margin-right:20px ;
+    margin-left:20px ;
     flex: 1;
     box-sizing: border-box;
 }
@@ -42,10 +47,15 @@ form .form-end{
 
 form .form-info .title{
     flex: 1;
+    display: flex;
 }
 form .form-info .title input{
-    width: 65vw;
+    flex: 1;
+    margin: 0px 5px
 }
+
+
+
 
 
 

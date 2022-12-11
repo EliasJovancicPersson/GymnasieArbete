@@ -1,18 +1,3 @@
-.dropdown{
-    position: relative;
-    margin: 20px;
-}
-
-.dropdown-content{
-    position: relative;
-    background-color: var(--main-color);
-    width: var(--page-width);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    box-sizing: border-box;
-    z-index: 1;
-}
-
 .display-none{
     display: none;
 }
@@ -20,10 +5,11 @@
 .title{
     background-color: var(--main-color);
     margin: 0;
-    padding: 0;
+    padding: 25px;
 }
 
 .title .title-header{
+    font-size: var(--fs-3);
     color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
@@ -34,21 +20,29 @@
     padding-right: 1.5rem;
 }
 
-.gyarb h2{
-    font-size: var(--fs-2);
-
-}
-
 .title .title-answer p{
     color: var(--secondary-color);
     margin: 0;
 }
 
 .gyarb{
-    margin: 50px;
+    margin: 30px;
     width: var(--page-width);
-    min-height: 60vh;
+    overflow-y: scroll;
 }
+
+body{
+    overflow-y: hidden;
+}
+
+.work-link{
+    position: relative;
+    margin: 20px;
+    text-decoration: none;
+}
+
+
+
 
 
 
