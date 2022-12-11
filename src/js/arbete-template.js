@@ -14,7 +14,7 @@ const responseVar = fetch(fetchUrl, {
     UpdateText(
       response.project.title,
       response.project.author,
-      response.project.createdAt,
+      response.project.createdAt.split("T").shift(),
       response.project.text,
       response.project.subject
     );
@@ -34,17 +34,18 @@ function UpdateText(title, author, timestamp, text, subject) {
     //get subject
     const subjectElem = document.querySelector(".gyarb .text-info .subject");
     //get timestamp
-    const timestampElem = document.querySelector(
-      ".gyarb .text-info .timestamp"
-    );
+    const timestampElem = document.querySelector(".gyarb .text-footer h3");
     //get text
-    const textElem = document.querySelector(".gyarb .text-main");
-
-    titelElem.textContent = title;
-    authorElem.textContent = author;
-    subjectElem.textContent = subject;
-    timestampElem.textContent = timestamp;
-    textElem.textContent = text;
+    const textElem = document.querySelector(".gyarb .text-main p");
+    try {
+      titelElem.textContent = title;
+      authorElem.textContent = author;
+      subjectElem.textContent = subject;
+      timestampElem.textContent = timestamp;
+      textElem.textContent = text;
+    } catch (err) {
+      console.log("Could not get information from database");
+    }
   } catch (err) {
     console.log("Could not get all elements :" + err);
   }
