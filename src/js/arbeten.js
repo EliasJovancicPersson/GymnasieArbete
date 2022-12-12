@@ -25,11 +25,12 @@ async function GetProjects() {
       responseArray = await response.projects;
 
       if (document.querySelector(".gyarb")) {
-        for (let i = 0; i < 11; i++) {
+        for (let i = 0; i < responseArray.length; i++) {
           CreateLinkElement();
         }
         DisplayPage(); //page can now be switched
         UpdateText(currentPage);
+        console.table(pages);
       }
     });
 }
@@ -41,7 +42,7 @@ function UpdateText(page) {
 
     for (let i = 0; i < a.length; i++) {
       try {
-        a[i].id = responseArray[i + page * 10]._id;
+        a[i].id = responseArray[i + page * 10]._id; //max entries can only be 10, need to find a way to change max entries to any number
         const pageUrl = "/src/html/work.html?id=" + a[i].id;
         a[i].href = pageUrl;
         titles[i].textContent = responseArray[i + page * 10].title;
