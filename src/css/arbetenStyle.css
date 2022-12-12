@@ -28,7 +28,7 @@
 .gyarb{
     margin: 30px;
     width: var(--page-width);
-    overflow-y: scroll;
+    overflow-y: hidden;
     display: flex;
     height: var(--main-element-hight);
 }
@@ -48,11 +48,22 @@ body{
 }
 
 #forwards,#backwards{
-    background-color: black;
-    width: 40px;
-    height: 40px;
-    margin: 15px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
     align-self: center;
+}
+
+#forwards{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);  
+}
+
+#backwards{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 

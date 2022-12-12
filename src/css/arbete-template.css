@@ -8,11 +8,20 @@
 }
 
 .text-info{
-    margin: 0px 60px;
+    margin: 10px 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    border-bottom: solid;
 }
+
+.text-info .subject,.text-info .author{
+    font-size: var(--fs-2);
+}
+.text-info .title {
+    font-size: var(--fs-1);
+}
+ 
 
 .text-main p{
     margin: 20px 60px;
