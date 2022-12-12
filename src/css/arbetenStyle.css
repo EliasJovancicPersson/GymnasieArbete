@@ -29,16 +29,30 @@
     margin: 30px;
     width: var(--page-width);
     overflow-y: scroll;
-}
-
-body{
-    overflow-y: hidden;
+    min-height: var(--min-element-height);
+    display: flex;
+    align-items: center;
 }
 
 .work-link{
     position: relative;
     margin: 20px;
     text-decoration: none;
+}
+
+body{
+    max-height: 100vh;
+}
+
+.work-list{
+    flex:1;
+}
+
+#forwards,#backwards{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
 }
 
 

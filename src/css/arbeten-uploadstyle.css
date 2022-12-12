@@ -1,14 +1,12 @@
-body{
-    overflow-y: hidden;
-}
-
 .container .gyarb{
     display: flex;
     justify-content: center;
+    min-height: var(--min-element-height);
 }
 
 .gyarb{
     margin: 30px;
+    
 }
 
 form{
