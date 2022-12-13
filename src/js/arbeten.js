@@ -60,7 +60,7 @@ function UpdateText(page) {
 				console.log(err);
 				//display error on website for not finding the project from backend
 				titles[i].textContent =
-					"ERROR, could not read from database. Maybe it dosent exist?";
+					"ERROR, could not read from database. Maybe it doesn't exist?";
 			}
 		}
 	} catch (err) {
