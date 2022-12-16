@@ -32,6 +32,7 @@ function post() {
 	})
 		.then((response) => response.json())
 		.then((response) => console.log(JSON.stringify(response)));
+	//take response id and create container with that id
 }
 
 function CreateFormData() {
