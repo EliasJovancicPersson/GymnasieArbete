@@ -10,6 +10,9 @@ const submitElement = document.querySelector("form .form-end #submit");
 const formElement = document.querySelector("form");
 
 submitElement.addEventListener("click", submit);
+fileElement.addEventListener("change", CheckFiles);
+
+const maxFiles = 2; //temp value of 2, thinking about 10 normally
 
 function submit() {
   if (
@@ -36,6 +39,23 @@ function post() {
   //take response id and create container with that id
 }
 
+function CheckFiles() {   //TODO : add a check for file size, both here and in backend
+  if (fileElement.files.length > maxFiles) {
+    alert(`Max ${maxFiles} filer få laddas upp!`);
+    const tempTitle = titleElement.value;
+    const tempAuthor = authorElement.value;
+    const tempText = textElement.value;
+    const tempSubject = subjectElement.value;
+
+    formElement.reset();
+
+    titleElement.value = tempTitle;
+    authorElement.value = tempAuthor;
+    textElement.value = tempText;
+    subjectElement.value = tempSubject;
+  }
+}
+
 function CreateFormData() {
   const formdata = new FormData();
   formdata.append("title", titleElement.value);
@@ -43,10 +63,11 @@ function CreateFormData() {
   formdata.append("text", textElement.value);
   formdata.append("subject", subjectElement.value);
 
-  if (fileElement.files) { //append file if it exists
-    let files = Array.from(fileElement.files); //Files come in a filelist, conver to array here
-    files.forEach((file) => { 
-      formdata.append("files", file); 
+  if (fileElement.files) {
+    //append file if it exists
+    let files = Array.from(fileElement.files); //Files come in a filelist, convert to array here
+    files.forEach((file) => {
+      formdata.append("files", file);
     });
   }
 
