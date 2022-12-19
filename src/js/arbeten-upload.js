@@ -43,8 +43,11 @@ function CreateFormData() {
   formdata.append("text", textElement.value);
   formdata.append("subject", subjectElement.value);
 
-  if (fileElement.files) {
-    formdata.append("files", fileElement.files[0]); //append file if it exists
+  if (fileElement.files) { //append file if it exists
+    let files = Array.from(fileElement.files); //Files come in a filelist, conver to array here
+    files.forEach((file) => { 
+      formdata.append("files", file); 
+    });
   }
 
   return formdata;
