@@ -1,21 +1,21 @@
 :root{
-    --page-width:65vw;
+    --page-width:90vw;
     --main-element-hight:60vh;
-    --main-color: #537a5a;
+    --main-color: #2C8158;
     --secondary-color:#ffffff;
-    --accent-color: #3e6846;
+    --accent-color: #256c4a;
+    --card-color:#ffffff;
     
-    --fs-1:50px;
+    --fs-1:40px;
     --fs-2:30px;
-    --fs-3:20px;
+    --fs-3:18px;
 
     --img-margin-padding:10px;
 
     
 }
-
 body{
-    font-family:  "helvetica";
+    font-family:  "sans-serif";
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -41,7 +41,6 @@ nav{
     align-items: center;
     
 }
-
 nav ul {
     display: flex;
     align-items: center;
@@ -50,14 +49,12 @@ nav ul {
     margin: 10px;
     flex-grow: 3;
 }
-
 nav li{
     list-style-type: none;
     text-decoration: none;
     margin: 0;
     padding: 0;
 }
-
 nav li a{
     font-size: var(--fs-1);
     padding: 0px 15px;
@@ -72,24 +69,20 @@ nav li a:hover{
 nav li .active{
     background-color: var(--accent-color);
 }
-
 #logo{
     max-width: 280px;
     padding: 0;
     margin: 0.5rem;
 }
-
 .container{
     display: flex;
     flex: 1;
 }
-
 .column-center{
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 .row-center{
     flex-direction: row;
     justify-content: center;
@@ -102,7 +95,6 @@ Padding and margin for all blocks
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
 /*
 INTRO
 */
@@ -111,6 +103,9 @@ INTRO
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 50px;
+    box-shadow: 5px 10px 10px var(--card-color);
+    background-color: var(--card-color);
 }
 .intro-txt{
     display: flex;
@@ -120,6 +115,7 @@ INTRO
 .intro h2{
     font-size: var(--fs-1);
     border-bottom: solid;
+    border-color: var(--accent-color);
     padding-bottom: 1rem;
     margin: 0;
 }
@@ -146,6 +142,7 @@ INTRO-TRIPPLE
     flex-wrap: wrap;
     flex: 1;
     border-top: solid;
+    border-color: var(--accent-color);
 }
 
 .intro-tripple img{
@@ -163,7 +160,8 @@ INTRO-TRIPPLE
     text-align: center;
     padding: 15px;
     margin: 0;
-    border-bottom: solid
+    border-bottom: solid;
+    border-color: var(--accent-color);
 }
 /*
 FOOTER
