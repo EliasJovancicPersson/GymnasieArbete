@@ -129,7 +129,7 @@ INTRO
 /*
 Margin and padding for all images
 */
-.image{
+.intro .image,.intro-tripple .image{
     margin: var(--img-margin-padding);
     padding: var(--img-margin-padding);
 }
@@ -170,9 +170,9 @@ footer{
     position: relative;
     bottom: 0;
     width: 100vw;
-    height: 25vh;
+    height: 15vh;
     background-color: var(--main-color);
-
+    z-index: 50;
     display: flex;
     justify-content:space-between;
     align-items: center;
