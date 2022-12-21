@@ -1,3 +1,7 @@
 const activePage = location.pathname;
-const navElement = document.querySelector(`a[href^='${activePage}']`);
-navElement.classList.add("active");
+if (activePage == "/src/html/work.html") {
+} else {
+  const navElement = document.querySelector(`a[href^='${activePage}']`);
+  console.log(activePage);
+  navElement.classList.add("active");
+}
