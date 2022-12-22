@@ -41,8 +41,15 @@ function post() {
       } else if (response.message == "FILE-FORMAT") {
         alert("Wrong file format, we only allow jpeg,jpg,png and gifs");
       } else {
-        alert("uploaded");
-        //sucsess
+        console.log(response);
+        //display loading thing
+
+        /*window.location.replace(
+          location.href.slice(0, location.href.lastIndexOf("/")) +
+            "/work.html?id=" +
+            response.id
+        );*/
+
         //display new page
       }
     });
