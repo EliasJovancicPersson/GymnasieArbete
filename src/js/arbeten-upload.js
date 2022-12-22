@@ -35,11 +35,29 @@ function post() {
     body: CreateFormData(),
   })
     .then((response) => response.json())
-    .then((response) => console.log(JSON.stringify(response)));
+    .then((response) => {
+      if (response.message == "FILE-SIZE") {
+        alert("The maximum filesize is 25mb each!");
+      } else if (response.message == "FILE-FORMAT") {
+        alert("Wrong file format, we only allow jpeg,jpg,png and gifs");
+      } else {
+        console.log(response);
+        //display loading thing
+
+        /*window.location.replace(
+          location.href.slice(0, location.href.lastIndexOf("/")) +
+            "/work.html?id=" +
+            response.id
+        );*/
+
+        //display new page
+      }
+    });
   //take response id and create container with that id
 }
 
-function CheckFiles() {   //TODO : add a check for file size, both here and in backend
+function CheckFiles() {
+  //TODO : add a check for file size, both here and in backend
   if (fileElement.files.length > maxFiles) {
     alert(`Max ${maxFiles} filer få laddas upp!`);
     const tempTitle = titleElement.value;
