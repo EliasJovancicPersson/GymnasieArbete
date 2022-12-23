@@ -99,6 +99,14 @@ nav ul li .searchWrapper{
     align-items: center;
     gap: 5px;
 }
+nav ul li .searchWrapper #search{
+    border-radius: 20px;
+    padding: 5px;
+}
+nav ul li .searchWrapper #search:hover{
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
 .container{
     display: flex;
     flex: 1;

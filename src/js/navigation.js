@@ -3,6 +3,7 @@ searchBtn.addEventListener("click", Search);
 
 function Search() {
   //query api to search
+  console.log("search");
 }
 
 const activePage = location.pathname;
