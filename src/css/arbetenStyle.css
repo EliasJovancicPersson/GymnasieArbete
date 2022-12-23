@@ -66,6 +66,22 @@ body{
     -webkit-transform: rotate(135deg);
 }
 
+.upload{
+    text-decoration: 0;
+    color: white;
+    background-color: var(--main-color);
+    width: 12rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.upload p{
+    font-size: var(--fs-3);
+}
+
 
 
 

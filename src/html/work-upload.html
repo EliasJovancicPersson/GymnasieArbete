@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/src/css/css-reset.css" />
-		<link rel="stylesheet" href="/src/css/arbeten-uploadstyle.css" />
-		<link rel="stylesheet" href="/src/css/style.css" />
-		<script src="/src/js/arbeten-upload.js" defer></script>
-		<script src="/src/js/navigation.js" defer></script>
 
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-		/>
-		<title>Gymnasiearbete</title>
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/src/css/css-reset.css" />
+	<link rel="stylesheet" href="/src/css/arbeten-uploadstyle.css" />
+	<link rel="stylesheet" href="/src/css/style.css" />
+	<script src="/src/js/arbeten-upload.js" defer></script>
+	<script src="/src/js/navigation.js" defer></script>
 
-	<body>
-		<nav>
-			<ul>
-				<li>
-					<a href="/index.html">Hem</a>
-				</li>
-				<li>
-					<a href="/src/html/work-list.html">Arbeten</a>
-				</li>
-				<li>
-					<a href="/src/html/work-upload.html">Ladda upp</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="container column-center">
-			<div class="gyarb">
-				<form>
-					<div class="form-info">
-						<div class="title">
-							<label for="title"> Titel: </label>
-							<input type="text" name="title" id="title" />
-						</div>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>Gymnasiearbete</title>
+</head>
 
-						<div class="author">
-							<label for="author"> Författare: </label>
-							<input type="text" name="author" id="author" />
-						</div>
+<body>
+	<nav>
+		<ul>
+			<li class="logo">
+				<img src="/src/images/melvinjul.png" alt="No Photo :(">
+			</li>
+			<li>
+				<div class="searchWrapper">
+					<input type="search" placeholder="Sök på Arbeten">
+				</div>
+			</li>
+			<li class="links">
+				<a href="/index.html">Hem</a>
+				<a href="/src/html/work-list.html">Utforska</a>
+				<a href="">Log In/Sign Up</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container column-center">
+		<div class="gyarb">
+			<form>
+				<div class="form-info">
+					<div class="title">
+						<label for="title"> Titel: </label>
+						<input type="text" name="title" id="title" />
 					</div>
-					<div class="form-text">
-						<label for="text">
-							<textarea name="text" id="text" cols="50" rows="10">
-Klistra in ditt gymnasiearbete här</textarea
-							>
-						</label>
+
+					<div class="author">
+						<label for="author"> Författare: </label>
+						<input type="text" name="author" id="author" />
 					</div>
-					<div class="form-end">
-						<select name="subjects" id="subject">
-							<option value="Välje ett ämne">Välje ett ämne</option>
-							<option value="naturvetenskapsprogrammet">
-								naturvetenskapsprogrammet
-							</option>
-							<option value="teknikprogrammet">teknikprogrammet</option>
-							<option value="ekonomiprogrammet">ekonomiprogrammet</option>
-							<option value="humanistiskaprogrammet">
-								humanistiskaprogrammet
-							</option>
-							<option value="samhällsvetenskapligaprogrammet">
-								samhällsvetenskapligaprogrammet
-							</option>
-							<option value="estetiskaprogrammet">estetiskaprogrammet</option>
-							<option value="internationall">internationall</option>
-						</select>
-						<input type="file" name="file" id="file" multiple />
-						<input type="button" value="Submit" id="submit" />
-					</div>
-				</form>
-			</div>
+				</div>
+				<div class="form-text">
+					<label for="text">
+						<textarea name="text" id="text" cols="50" rows="10">
+Klistra in ditt gymnasiearbete här</textarea>
+					</label>
+				</div>
+				<div class="form-end">
+					<select name="subjects" id="subject">
+						<option value="Välje ett ämne">Välje ett ämne</option>
+						<option value="naturvetenskapsprogrammet">
+							naturvetenskapsprogrammet
+						</option>
+						<option value="teknikprogrammet">teknikprogrammet</option>
+						<option value="ekonomiprogrammet">ekonomiprogrammet</option>
+						<option value="humanistiskaprogrammet">
+							humanistiskaprogrammet
+						</option>
+						<option value="samhällsvetenskapligaprogrammet">
+							samhällsvetenskapligaprogrammet
+						</option>
+						<option value="estetiskaprogrammet">estetiskaprogrammet</option>
+						<option value="internationall">internationall</option>
+					</select>
+					<input type="file" name="file" id="file" multiple />
+					<input type="button" value="Submit" id="submit" />
+				</div>
+			</form>
 		</div>
-		<footer>
-			<ul class="footer-links">
-				<li>
-					<a href="/index.html">Hem</a>
-				</li>
-				<li>
-					<a href="/src/html/work-list.html">Arbeten</a>
-				</li>
-				<li>
-					<a href="/src/html/work-upload.html">Ladda upp</a>
-				</li>
-			</ul>
-			<ul class="footer-contact">
-				<li>
-					<h3>Kontakt info</h3>
-				</li>
-				<li>
-					<a href="mailto:info@gyarbeten.se">info@gyarbeten.se</a>
-				</li>
-				<li>
-					<a href="tel:+46760554812">+46 76 055 48 12</a>
-				</li>
-			</ul>
-		</footer>
-	</body>
+	</div>
+	<footer>
+		<ul class="footer-links">
+			<li>
+				<a href="/index.html">Hem</a>
+			</li>
+			<li>
+				<a href="/src/html/work-list.html">Arbeten</a>
+			</li>
+			<li>
+				<a href="/src/html/work-upload.html">Ladda upp</a>
+			</li>
+		</ul>
+		<ul class="footer-contact">
+			<li>
+				<h3>Kontakt info</h3>
+			</li>
+			<li>
+				<a href="mailto:info@gyarbeten.se">info@gyarbeten.se</a>
+			</li>
+			<li>
+				<a href="tel:+46760554812">+46 76 055 48 12</a>
+			</li>
+		</ul>
+	</footer>
+</body>
+
 </html>
