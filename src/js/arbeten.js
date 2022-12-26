@@ -1,4 +1,4 @@
-let url = "http://localhost:8000/wiki";
+let url = "http://localhost:8000/wiki/"; //ändra url här för att söka med olika querys
 let responseArray = [];
 let pages = [[]];
 let pagesIndex = 0;
