@@ -1,9 +1,13 @@
 const searchBtn = document.querySelector("#search");
 searchBtn.addEventListener("click", Search);
-
+const searchBar = document.querySelector(".searchWrapper input");
+console.log(searchBar);
 function Search() {
-  //query api to search
-  console.log("search");
+  let query = searchBar.value;
+  let queryType = "title";
+  window.location.assign(
+    "http://127.0.0.1:5500/src/html/work-list.html?" + queryType + "=" + query
+  );
 }
 
 const activePage = location.pathname;

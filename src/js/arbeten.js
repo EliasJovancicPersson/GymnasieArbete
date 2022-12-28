@@ -1,4 +1,9 @@
-let url = "http://localhost:8000/wiki/"; //ändra url här för att söka med olika querys
+let url = "http://localhost:8000/wiki/search/?"; //ändra url här för att söka med olika querys
+let querys = document.URL.split("?").pop().split("&");
+querys.forEach((element) => {
+  url = url + element;
+});
+console.log(url);
 let responseArray = [];
 let pages = [[]];
 let pagesIndex = 0;
