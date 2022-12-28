@@ -1,7 +1,7 @@
 :root{
     --page-width:90vw;
     --main-element-hight:60vh;
-    --main-color:  #304235;
+    --main-color:  #306e42;
     --secondary-color: #304235;
     --accent-color: #256c4a;
     --card-color:#ffffff;
@@ -26,6 +26,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: linear-gradient(var(--main-color), black);
 }
 /*
 NAVIGATION
@@ -141,7 +142,7 @@ INTRO
     
     border-radius: 25px;
   
-    box-shadow: 5px 10px 10px black;
+    box-shadow: 10px 10px 5px #20301f;
     background-color: var(--card-color);
     color: black;
 }
@@ -209,11 +210,12 @@ footer{
     bottom: 0;
     width: 100vw;
     height: 15vh;
-    background-color: var(--main-color);
+    background-color: var(black);
     z-index: 50;
     display: flex;
     justify-content:space-between;
     align-items: center;
+    color: white;
 }
 
 footer ul{
@@ -221,12 +223,12 @@ footer ul{
 }
 
 footer ul li a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .footer-links{
-    font-size: var(--fs-1);
+    font-size: var(--fs-2);
     display: flex;
 }
 
