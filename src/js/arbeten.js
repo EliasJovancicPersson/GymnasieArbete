@@ -8,7 +8,7 @@ let responseArray = [];
 let pages = [[]];
 let pagesIndex = 0;
 let currentPage = 0;
-const maxEntires = 9;
+let maxEntires = 9;
 
 const gyarb = document.querySelector(".work-list");
 const scrollBack = document.querySelector("#backwards");
@@ -37,6 +37,9 @@ async function GetProjects() {
             pagesIndex++;
             pages[pagesIndex] = new Array();
             pages[pagesIndex].push(responseArray[i]);
+          }
+          if (maxEntires > responseArray.length) {
+            maxEntires = responseArray.length;
           }
           //CreateLinkElement();
         }
