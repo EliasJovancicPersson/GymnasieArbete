@@ -8,17 +8,23 @@ let responseArray = [];
 let pages = [[]];
 let pagesIndex = 0;
 let currentPage = 0;
-let maxEntires = 9;
+let maxEntires = 8;
 
 const gyarb = document.querySelector(".work-list");
 const scrollBack = document.querySelector("#backwards");
 const scrollForw = document.querySelector("#forwards");
+const pageCounter = document.querySelector("#page");
 
 scrollBack.addEventListener("click", function () {
   scrollBackward();
 });
 scrollForw.addEventListener("click", function () {
   scrollForward();
+});
+pageCounter.addEventListener("change", function () {
+  currentPage = pageCounter.value;
+  DisplayPage();
+  UpdateText(currentPage);
 });
 
 async function GetProjects() {
@@ -47,8 +53,8 @@ async function GetProjects() {
             CreateLinkElement(); //create maxentries(10) elements
           }
         }
+        pageCounter.max = pages.length - 1;
         UpdateText(currentPage);
-        console.table(pages);
       }
     });
 }
@@ -102,9 +108,10 @@ function DisplayPage() {
     let elements = document.querySelectorAll(".work-link");
     elements.forEach((element) => {
       element.remove();
+      console.log("remove");
     });
   }
-
+  console.log(pages[currentPage].length);
   for (let i = 0; i < pages[currentPage].length; i++) {
     CreateLinkElement();
   }
