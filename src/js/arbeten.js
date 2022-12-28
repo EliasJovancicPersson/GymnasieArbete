@@ -41,12 +41,12 @@ async function GetProjects() {
           if (maxEntires > responseArray.length) {
             maxEntires = responseArray.length;
           }
-          //CreateLinkElement();
         }
-        for (let i = 0; i < maxEntires; i++) {
-          CreateLinkElement(); //create maxentries(10) elements
+        if (responseArray.length > 0) {
+          for (let i = 0; i < maxEntires; i++) {
+            CreateLinkElement(); //create maxentries(10) elements
+          }
         }
-        //DisplayPage(); //page can now be switched
         UpdateText(currentPage);
         console.table(pages);
       }
