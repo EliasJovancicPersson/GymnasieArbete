@@ -1,8 +1,8 @@
 :root{
     --page-width:90vw;
     --main-element-hight:60vh;
-    --main-color: #2C8158;
-    --secondary-color:#ffffff;
+    --main-color:  #304235;
+    --secondary-color: #304235;
     --accent-color: #256c4a;
     --card-color:#ffffff;
     
@@ -16,6 +16,7 @@
 }
 body{
     font-family:  "sans-serif";
+    color: white;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -30,6 +31,7 @@ body{
 NAVIGATION
 */
 nav{
+    color: white;
     z-index: 999;
     background-color: var(--main-color);
     padding: 0;
@@ -84,7 +86,7 @@ nav li a{
     text-align: center;
     font-size: 32px;
     padding: 5px 25px;
-    color: black;
+    color: white;
     text-decoration: none;
     border-radius: 30px;
 }
@@ -136,9 +138,12 @@ INTRO
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 50px;
-    box-shadow: 5px 10px 10px var(--card-color);
+    
+    border-radius: 25px;
+  
+    box-shadow: 5px 10px 10px black;
     background-color: var(--card-color);
+    color: black;
 }
 .intro-txt{
     display: flex;

@@ -34,17 +34,14 @@
     border-radius: 10px;
 }
 
-#login-form p{
+#login-form .signup-form{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     font-size: var(--fs-3);
-    border-top: solid;
-    width: 20rem;
-    margin: 10px;
-    border-color: black;
-    margin: ;
-    
 }
-#login-from a{
+
+#login-form .signup-form a{
     margin-left: 5px;
+    color:  white;
+
 }
