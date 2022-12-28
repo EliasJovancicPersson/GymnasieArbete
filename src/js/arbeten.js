@@ -3,7 +3,6 @@ let querys = document.URL.split("?").pop().split("&");
 querys.forEach((element) => {
   url = url + element;
 });
-console.log(url);
 let responseArray = [];
 let pages = [[]];
 let pagesIndex = 0;
@@ -22,7 +21,7 @@ scrollForw.addEventListener("click", function () {
   scrollForward();
 });
 pageCounter.addEventListener("change", function () {
-  currentPage = pageCounter.value;
+  currentPage = pageCounter.value - 1;
   DisplayPage();
   UpdateText(currentPage);
 });
@@ -63,10 +62,9 @@ function UpdateText(page) {
   try {
     let a = document.querySelectorAll(".gyarb a");
     let titles = document.querySelectorAll(".title .title-header h3");
-
     for (let i = 0; i < a.length; i++) {
       try {
-        a[i].id = pages[currentPage][i]._id; //max entries can only be 10, need to find a way to change max entries to any number
+        a[i].id = pages[currentPage][i]._id;
         const pageUrl = "/src/html/work.html?id=" + a[i].id;
         a[i].href = pageUrl;
         titles[i].textContent = pages[currentPage][i].title;
@@ -99,8 +97,6 @@ function CreateLinkElement() {
   div1.appendChild(title);
 
   gyarb.appendChild(a);
-
-  console.log("create element");
 }
 
 function DisplayPage() {
@@ -108,10 +104,8 @@ function DisplayPage() {
     let elements = document.querySelectorAll(".work-link");
     elements.forEach((element) => {
       element.remove();
-      console.log("remove");
     });
   }
-  console.log(pages[currentPage].length);
   for (let i = 0; i < pages[currentPage].length; i++) {
     CreateLinkElement();
   }
@@ -120,6 +114,7 @@ function DisplayPage() {
 function scrollForward() {
   if (currentPage + 1 <= pagesIndex) {
     currentPage++;
+    pageCounter.value = currentPage + 1;
     DisplayPage();
     UpdateText(currentPage);
   }
@@ -127,6 +122,7 @@ function scrollForward() {
 function scrollBackward() {
   if (currentPage - 1 >= 0) {
     currentPage--;
+    pageCounter.value = currentPage + 1;
     DisplayPage();
     UpdateText(currentPage);
   }

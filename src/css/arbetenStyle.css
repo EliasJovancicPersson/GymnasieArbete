@@ -29,6 +29,8 @@
     margin: 30px;
     width: var(--page-width);
     overflow-y: hidden;
+    overflow-x: hidden;
+
     display: flex;
     height: var(--main-element-hight);
 }
@@ -36,6 +38,7 @@
 .work-link{
     position: relative;
     text-decoration: none;
+    animation: slidein .5s;
 }
 
 body{
@@ -47,25 +50,32 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 
 #forwards,#backwards{
     border: solid black;
-    border-width: 0 4px 4px 0;
+    border-width: 0 6px 6px 0;
     display: inline-block;
-    padding: 10px;
-    margin: 5px;
+    padding: 20px;
+    margin: 10px;
     align-self: center;
+}
+#forwards:hover,#backwards:hover{
+    border-color: rgb(184, 184, 184)
 }
 
 #forwards{
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);  
+    -webkit-transform: rotate(-45deg); 
+    transition: .2s; 
+
 }
 
 #backwards{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    transition: .2s; 
 }
 
 .upload{
@@ -90,7 +100,14 @@ body{
     align-self: flex-end;
 }
 
-
+@keyframes slidein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
 
 
 
