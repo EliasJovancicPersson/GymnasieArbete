@@ -57,7 +57,6 @@ function post() {
 }
 
 function CheckFiles() {
-  //TODO : add a check for file size, both here and in backend
   if (fileElement.files.length > maxFiles) {
     alert(`Max ${maxFiles} filer få laddas upp!`);
     const tempTitle = titleElement.value;
