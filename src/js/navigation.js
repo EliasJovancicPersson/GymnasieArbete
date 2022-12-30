@@ -5,8 +5,6 @@ const searchBar = document.querySelector(".searchWrapper input");
 
 const logginElem = document.querySelector("#loggin");
 
-console.log(document.cookie);
-
 function Search() {
   let query = searchBar.value;
   let queryType = "title";

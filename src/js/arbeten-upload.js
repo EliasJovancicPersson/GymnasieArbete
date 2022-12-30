@@ -30,7 +30,8 @@ function submit() {
 }
 
 function post() {
-  fetch("http://localhost:8000/wiki", {
+  fetch("https://localhost:8000/wiki", {
+    credentials: "include",
     method: "POST",
     body: CreateFormData(),
   })
