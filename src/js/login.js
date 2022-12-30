@@ -21,6 +21,7 @@ function login() {
   })
     .then((response) => response.json())
     .then((response) => {
-      console.log(document.cookie);
+      window.localStorage.setItem("loggedIn", "true");
+      //window.location = "/src/html/profile.html";
     });
 }
