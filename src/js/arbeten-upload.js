@@ -30,7 +30,7 @@ function submit() {
 }
 
 function post() {
-  fetch("https://localhost:8000/wiki", {
+  fetch("https://gyarb-backend.azurewebsites.net/wiki", {
     credentials: "include",
     method: "POST",
     body: CreateFormData(),

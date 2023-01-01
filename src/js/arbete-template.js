@@ -13,7 +13,7 @@ close.addEventListener("click", () => {
 });
 
 let projId = query.toString().split("=").pop();
-fetchUrl = "https://localhost:8000/wiki/" + projId;
+fetchUrl = "https://gyarb-backend.azurewebsites.net/wiki/" + projId;
 
 const responseVar = fetch(fetchUrl, {
   method: "GET",

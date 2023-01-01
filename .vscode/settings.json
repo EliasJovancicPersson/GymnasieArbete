@@ -1,7 +1,9 @@
+{  
+"liveServer.settings.https":   
 {
-    "cSpell.words": [
-        "Forw",
-        "gyarb",
-        "maxentries"
-    ]
+"enable": true, //set it true to enable the feature.  
+"cert": "C:\\Users\\batma\\selfsigned.crt", //full path of the certificate  
+"key": "C:\\Users\\batma\\selfsigned.key", //full path of the private key  
+"passphrase": "12345"  
+}  
 }

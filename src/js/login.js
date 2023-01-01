@@ -8,7 +8,7 @@ loginBtn.addEventListener("click", () => {
 
 function login() {
   console.log({ email: emailElem.value, password: passwordElem.value });
-  fetch("https://localhost:8000/login", {
+  fetch("https://gyarb-backend.azurewebsites.net/login", {
     method: "POST",
     credentials: "include",
     headers: {
